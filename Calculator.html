@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>calculator</title>
+  <style>
+  img{
+    float: right;
+  }
+  </style>
+</head>
+<body>
+  <article>
+    <header>
+    <a href="Home.html"><img id="logo" src="logo.png"></a>
+   <br>    
+        <div class="upper">
+            <a class="up" href="Home.html">Home</a>
+            <a class="up" href="Story.html">Story</a>
+            <a class="up" href="Calculator.html">Calculator</a>
+            <a class="up" href="Lullaby.html">Lullaby</a>
+        </div>
+    </header></article> <br>
+  <img src="cal_img.jpg" alt="Kids Camp" style="width:40%;height:25%;margin-right:10px; margin-top:5%; margin-bottom: 5px;"/>
+  
+  <div class="content">
+    <div class="content-inside">
+      
+<br> <br>
+
+<script defer src="script.js"></script>
+
+<div id="calculator">
+<h1>Study Time</h1>
+<h3>Put your numbers in boxes and get them calculated easily.</h3>
+
+<form >
+  <label for="fname">First number:</label>
+  <input type="text"  id="firstNumber" name="fname"><br><br>
+  <label for="lname">Last number:</label>
+  <input type="text" id="secondNumber" name="lname"><br><br>
+  
+<br>
+<input type="button" onClick="addition()"  data-modal-target="#modal" Value="Addition" />
+<input type="button" onClick="subtraction()"  data-modal-target="#modal" Value="subtraction" />
+<input type="button" onClick="multiplyBy()"  data-modal-target="#modal" Value="Multiplication" />
+<input type="button" onClick="divideBy()"  data-modal-target="#modal" Value="Division" />
+<br><br>
+<input id="reset" type="reset" value="Reset"/>
+</form> 
+
+<br>
+<div class="modal" id="modal">
+<div class="modal-header">
+<div class="title">Answer!!</div>
+<button data-close-button class="close-button">&times;</button>
+</div>
+<div class="modal-body">
+</script>
+<p>The Result is:<br>
+<span id="result"></span>
+</p>
+</div>
+<script>
+function multiplyBy()
+{num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML =  num1 * num2;
+}
+
+function divideBy()
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+
+function subtraction()
+{num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 - num2;
+}
+function addition()
+{num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML =  num1 + num2;
+}
+</script>
+<div id="overlay"></div>
+  </div>
+<br>
+
+<div class="modal" id="modal">
+<div class="modal-header">
+<div class="title">Answer!</div>
+<button data-close-button class="close-button">&times;</button>
+</div>
+<div class="modal-body">
+</script>
+<p>The Result is:<br>
+<span id="result"></span>
+</p>
+</div> <br> <br>
+
+<script>
+function multiplyBy()
+{num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML =  num1 * num2;
+}
+
+function divideBy()
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+
+function subtraction()
+{num1 = document.getElementById("firstNumber").value;
+num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 - num2;
+}
+function addition()
+{num1 = parseInt(document.getElementById("firstNumber").value);
+num2 =  parseInt(document.getElementById("secondNumber").value);
+let x=0;
+x=num1 +num2;
+document.getElementById("result").innerHTML = x;
+}
+</script>
+ 
+<div id="overlay"></div>
+
+</div>
+
+</div></div>
+
+
+
+<footer class="footer"><br>
+  <pre>Developed by Runtime terror team.
+  Kalindi College
+  University of Delhi
+</pre>
+</footer>
+</body>
+</html>
